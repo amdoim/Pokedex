@@ -76,18 +76,25 @@
       <h3><?=$this->evolucao2->name?></h3>
      <a href="<?=$this->evolucao2->id?>">         
       <img src="<?=$this->evolucao2->sprites->other->dream_world->front_default?>" alt="cloud" style="width:80px">
+      <?php if(!empty($this->evolucao3)) {?>
       <img class="seta" src="http://dedmd.com.br/validacao/2019_1/SOCIEDADE%20BRASILEIRA%20E%20CIDADANIA/Unidade%201/VIDEOSCRIBE/ILUSTRA%C3%87%C3%95ES/seta.svg" style="{margin: 0 0 0 13px}" width="100" alt="">
+     
          </a>   
     </div>
-
+    
     <div class="w3-third w3-center w3-margin-bottom">
+    
     <h3><?=$this->evolucao3->name?></h3>
      <a href="<?=$this->evolucao3->id?>"> 
      
       <img src="<?=$this->evolucao3->sprites->other->dream_world->front_default?>" alt="clouds" style="width:80px">
+  
      </a>   
     </div>
-   
+    <?php }else{ ?>
+      </a>   
+    </div>
+    <?php }?>
   </div>
 </div>
 </center>

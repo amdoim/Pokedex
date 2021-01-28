@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemóns</title>
 
-    <link rel="stylesheet" href="http://localhost/MedLynx/estilo/estilo.css"type="text/css" >
+    <link rel="stylesheet" href="http://localhost/MedLynx/Views/estilo/estilo.css"type="text/css" >
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 </head>
 <body>

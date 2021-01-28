@@ -3,17 +3,17 @@
 <?php
 
 
-class homeControle extends Controle{
+class homeController extends Controller{
 
     public function index()
     {
         $Pokemons=array();
-        $api=new ApiPokemons();
-        $dados=$api->getAllPokemons(0);
+        $modelPoke=new PokemonsModel();
+        $dados=$modelPoke->BuscaPokemons(0);
         // $pkCount = (is_array($dados) ? count($dados) : 0);
         foreach ($dados as $key => $value) {
          
-            $pok=$api->getUrlPokemon($value->url);    
+            $pok=$modelPoke->getUrlPokemon($value->url);    
             array_push($Pokemons,$pok);
             
         }
@@ -24,15 +24,15 @@ class homeControle extends Controle{
 
     }
 
-    public function carregar($limite)
+    public function carregar($offset)
     {
         $Pokemons=array();
-        $api=new ApiPokemons();
-        $dados=$api->getAllPokemons($limite);
+        $modelPoke=new PokemonsModel();
+        $dados=$modelPoke->BuscaPokemons($offset);
         // $pkCount = (is_array($dados) ? count($dados) : 0);
         foreach ($dados as $key => $value) {
          
-            $pok=$api->getUrlPokemon($value->url);    
+            $pok=$modelPoke->getUrlPokemon($value->url);    
             array_push($Pokemons,$pok);
             
         }

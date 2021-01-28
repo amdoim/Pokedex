@@ -27,7 +27,7 @@ class Rota{
         {
             //quebrando a string e transfomando em array
             $url=explode('/',$url);
-            $controle= $url[0].'controle';
+            $controle= $url[0].'controller';
 
             //remover remover a primeira posição e realinha o vetor 
             array_shift($url);
@@ -46,16 +46,16 @@ class Rota{
         
     }else
     {
-        $controle='homeControle';
+        $controle='homeController';
         $metodo='index';
         
     }
 
-    $caminho="MedLynx/Controle/".$controle.'.php';
+    $caminho="MedLynx/Controllers/".$controle.'.php';
 
     if(!file_exists($caminho) && !method_exists($controle,$metodo))
     {
-        $controle='homeControle';
+        $controle='homeController';
         $metodo='index';
         $parametro=array();
     }

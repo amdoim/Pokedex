@@ -1,5 +1,5 @@
 <?php
-class Controle{
+class Controller{
     public $Pokemon;
     public $nomePokemon;
     public $evolucao;
@@ -12,7 +12,7 @@ class Controle{
         $this->nomePokemon=$AllPokmons;
         
         
-        require 'Apresentacao/index.php';
+        require 'Views/index.php';
     }
     public function CarregarPokemon($nomeView,$dados=array(),$pok1=array(),$pok2=array(),$pok3=array())
     {
@@ -24,13 +24,13 @@ class Controle{
 
         
         
-        require 'Apresentacao/index.php';
+        require 'Views/index.php';
     }
 
     public function CarregarViewIndex($nomeView,$dados=array())
     {
         extract($dados);
-        require 'Apresentacao/'.$nomeView.'.php';
+        require 'Views/'.$nomeView.'.php';
     }
 
 }
