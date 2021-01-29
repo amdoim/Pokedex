@@ -5,7 +5,7 @@
   <?php
 
 // craindo um caminho padrão
- $path="http://localhost/Medlynx/";
+ $path="http://localhost/";
 
 //obtendo a quantidade de dados no array
  $qtde=count($this->nomePokemon);
